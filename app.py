@@ -1,12 +1,22 @@
-from flask import Flask, redirect, url_for
+from flask import Flask,render_template, url_for
 app= Flask(__name__)
 @app.route('/')
 def home():
-    return "hi ananya"
-@app.route('/admin')
 
-def admin():
-    return redirect(url_for('home'))
+    return render_template('index.html')
+@app.route('/Length')
+def Length():
+    return "length"
+
+@app.route('/ Weight')
+def  Weight():
+    return " Weight"
+
+@app.route('/Temperature')
+def Temperature():
+    return "temperature"
+
+    
 
 if __name__== '__main__':
-    app.run()
+    app.run(debug=True)
