@@ -1,5 +1,10 @@
-{% extends 'base.html'%} {% block head%} UNIT CONVERTER WEB {%endblock%} {%
-block body%}
+{% extends 'base.html'%} {% block head%} UNIT CONVERTER WEB
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/index.css') }}"
+/>
+
+{%endblock%} {% block body%}
 <h2>Choose a Page:</h2>
 <button onclick="window.location.href='/Length'">Length</button>
 <button onclick="window.location.href='/Temperature'">Temperature</button>
