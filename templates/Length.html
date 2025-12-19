@@ -1,4 +1,20 @@
 {%extends 'base.html'%} {% block head%} this is the length {%endblock%} {% block
 body%}
-<form>enter ypur name</form>
+<form method="post">
+  <input type="number" name="value" placeholder="Enter value" required />
+
+  <select name="from_unit">
+    <option value="meter">Meter</option>
+    <option value="kilometer">Kilometer</option>
+    <option value="mile">Mile</option>
+  </select>
+
+  <select name="to_unit">
+    <option value="meter">Meter</option>
+    <option value="kilometer">Kilometer</option>
+    <option value="mile">Mile</option>
+  </select>
+
+  <button type="submit">Convert</button>
+</form>
 {%endblock%}

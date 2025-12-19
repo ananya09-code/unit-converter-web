@@ -1,4 +1,23 @@
 {%extends 'base.html'%} {% block head%} this is the wigth {%endblock%} {% block
 body%}
-<form>enter ypur name</form>
+<h2>Weight Converter</h2>
+
+<form method="post">
+  <input type="number" name="value" placeholder="Enter value" required />
+
+  <select name="from_unit">
+    <option value="gram">Gram</option>
+    <option value="kilogram">Kilogram</option>
+    <option value="pound">Pound</option>
+  </select>
+
+  <select name="to_unit">
+    <option value="gram">Gram</option>
+    <option value="kilogram">Kilogram</option>
+    <option value="pound">Pound</option>
+  </select>
+
+  <button type="submit">Convert</button>
+</form>
+
 {%endblock%}

@@ -1,4 +1,21 @@
 {%extends 'base.html'%} {% block head%} this is the tempeure tab {%endblock%}
 {%block body%}
-<form>enter ypur name</form>
+<form method="post">
+  <input type="number" name="value" placeholder="Enter value" required />
+
+  <select name="from_unit">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+
+  <select name="to_unit">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+
+  <button type="submit">Convert</button>
+</form>
+
 {%endblock%}
