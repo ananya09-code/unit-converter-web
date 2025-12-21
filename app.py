@@ -1,5 +1,6 @@
 from flask import Flask,render_template, url_for,request
 from converter.weght import convert_len
+from converter.length import convert_met
 app= Flask(__name__)
 @app.route('/')
 def home():
@@ -8,10 +9,10 @@ def home():
 @app.route('/Length', methods =['GET','POST'])
 def Length():
     if request.method=='POST':
-        ask_len=request.form['value']
+        ask_met=request.form['value']
         from_unit=request.form['from_unit']
         to_unit=request.form['to_unit']
-        return "yes lets go "
+        return convert_met(float(ask_met),from_unit,to_unit)
     else:
         return render_template('Length.html')
 
