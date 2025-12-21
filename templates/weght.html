@@ -1,7 +1,10 @@
-{%extends 'base.html'%} {% block head%} this is the wigth {%endblock%} {% block
-body%}
-<h2>Weight Converter</h2>
+{%extends 'base.html'%} {% block head%}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/length.css') }}"
+/>
 
+{%endblock%} {% block body%}
 <form method="post">
   <input type="number" name="value" placeholder="Enter value" required />
 

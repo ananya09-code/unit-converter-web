@@ -1,4 +1,18 @@
-{% extends 'base.html'%} {% block head%} UNIT CONVERTER WEB
+{% extends 'base.html'%} {% block head%}
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="{{ url_for('static', filename='image/logo.png') }}"
+        alt="Logo"
+        width="25"
+        height="20"
+        class="d-inline-block align-text-top"
+      />
+      UNIT CONVERTER WEB
+    </a>
+  </div>
+</nav>
 <link
   rel="stylesheet"
   href="{{ url_for('static', filename='css/index.css') }}"
