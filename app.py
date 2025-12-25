@@ -13,9 +13,15 @@ def Length():
         ask_met=request.form['value']
         from_unit=request.form['from_unit']
         to_unit=request.form['to_unit']
-        return convert_met(float(ask_met),from_unit,to_unit)
+        result=str(convert_met(float(ask_met),from_unit,to_unit))
+        return render_template('Length.html',
+                               result=result,
+                               from_unit=from_unit,
+                               to_unit=to_unit,
+                               value=ask_met)
     else:
         return render_template('Length.html')
+    
 
 @app.route('/Weight', methods =['GET','POST'])
 def  Weight():
@@ -23,9 +29,16 @@ def  Weight():
         ask_len=request.form['value']
         from_unit=request.form['from_unit']
         to_unit=request.form['to_unit']
-        return convert_len(float(ask_len),to_unit,from_unit)
+        result=str(convert_len(float(ask_len),to_unit,from_unit))
+        return render_template('weght.html',
+                               result=result,
+                               from_unit=from_unit,
+                               to_unit=to_unit,
+                               value=ask_len
+                               )
     else:
        return render_template('weght.html')
+    
 
 @app.route('/Temperature',methods =['GET','POST'])
 def Temperature():
@@ -33,7 +46,14 @@ def Temperature():
         ask_tem=request.form['value']
         from_unit=request.form['from_unit']
         to_unit=request.form['to_unit']
-        return convert_tem(float(ask_tem),from_unit,to_unit)
+        result=str(convert_tem(float(ask_tem),from_unit,to_unit))
+        return render_template('tem.html',
+                               result=result,
+                               from_unit=from_unit,
+                               to_unit=to_unit,
+                                value=ask_tem
+                               )
+ 
     else:
       return render_template('tem.html')
  

@@ -43,6 +43,9 @@
   <button class="btn btn-primary w-100">Convert</button>
 </form>
 
-{% if result is not none %}
-<div class="result-box">Result: {{ result }}</div>
+{% if result %}
+<div class="result-box">
+  <p><strong>From:</strong> {{ value }} {{ from_unit }}</p>
+  <p><strong>To:</strong> {{ result }} {{ to_unit }}</p>
+</div>
 {% endif %} {% endblock %}
