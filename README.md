@@ -49,7 +49,7 @@ Unit_converter_web/
 
 1. **Clone the repo**  
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/ananya09-code/unit-converter-web.git>
 ````
 
 2. **Navigate into the project folder**
